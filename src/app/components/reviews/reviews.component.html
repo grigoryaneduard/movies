@@ -1,0 +1,9 @@
+<div *ngIf="reviews$ | async as reviews">
+
+  <h3 class="font-weight-bold">Reviews</h3>
+  <hr>
+
+  <app-review *ngFor="let review of reviews.results"
+              [review]="review">
+  </app-review>
+</div>

@@ -1,0 +1,17 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Movies</a>
+</nav>
+
+<div *ngIf="movies && genres; else loading " class="container">
+  <app-movie *ngFor="let movie of movies" [movie]="movie" [genres]="genres"></app-movie>
+
+  <div class="row">
+    <div class="m-auto">
+      <pagination [totalItems]="totalItems" [(ngModel)]="currentPage" (pageChanged)="pageChanged($event)"></pagination>
+    </div>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading ...
+</ng-template>

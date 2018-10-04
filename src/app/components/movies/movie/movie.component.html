@@ -1,0 +1,29 @@
+<div routerLink="/movie/{{ movie.id }}" class="row p-4">
+
+  <div class="col-md-3">
+    <img class="img-fluid shadow-lg" src="https://image.tmdb.org/t/p/w300_and_h450_bestv2/{{ movie.poster_path }}">
+  </div>
+
+  <div class="col-md-9">
+
+    <h2 class="font-weight-bold">{{ movie.title }}</h2>
+
+    <div class="row pl-1 mb-4">
+      <div class="mr-auto">
+        <star-rating [starType]="'svg'" [showHalfStars]="true" [rating]="voteAverage" [readOnly]="true"></star-rating>
+      </div>
+    </div>
+
+    <dl class="row">
+      <dt class="col-md-3 text-uppercase">Genre</dt>
+      <dd class="col-md-9"><span class="badge badge-pill badge-primary">{{ genre }}</span></dd>
+
+      <dt class="col-md-3 text-uppercase">Overview</dt>
+      <dd class="col-md-9 font-italic">{{ overview }}</dd>
+
+      <dt class="col-md-3 text-uppercase">Release Date</dt>
+      <dd class="col-md-9 text-danger small">{{ releaseDate }}</dd>
+    </dl>
+
+  </div>
+</div>

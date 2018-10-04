@@ -1,0 +1,12 @@
+.custom-background {
+  height: 250px;
+  opacity: 0.7;
+  background: radial-gradient(circle at 20% 50%, rgba(11.76%, 15.29%, 17.25%, 0.98) 0%, rgba(11.76%, 15.29%, 17.25%, 0.88) 100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.movie__detail-wrapper {
+  margin-top: -100px;
+}

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">Movies</a>
+</nav>
+
+<div *ngIf="movie$ | async as movie; else loading">
+
+  <div [style.background-image]="'url(https://image.tmdb.org/t/p/w1400_and_h450_face' + movie.backdrop_path + ')'"
+       class="custom-background"
+  ></div>
+
+  <div class="container movie__detail-wrapper">
+    <app-movie [movie]="movie"></app-movie>
+    <app-reviews [movieId]="movie.id"></app-reviews>
+  </div>
+</div>
+
+<ng-template #loading>
+  Loading ...
+</ng-template>
